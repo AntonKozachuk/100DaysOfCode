@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="My first page">
+        <meta name="viewport" content="width=device_width, initial-scale=1.0">
         <title>My first HTML page</title>
         <style>
         a:link {
@@ -14,27 +17,62 @@
             text-decoration: none;
             font-size: 200%;
         }
-
         a:hover {
             color:springgreen;
             background:transparent;
             text-decoration: underline;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
+        table th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+        iframe {
+            border: none;
+        }
         </style>
         <base target="_blank">
     </head>
-    <body style="background-image: linear-gradient(grey, yellow, black);>
+    <body style="background-color:lemonchiffon">
+
         <a id="L1">Go to the first line!</a>
-        <p style="color:aqua" title="Wow!" id="L1"><strong>100days of code page!</strong></p>
-        <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">TypeScript basic types.</a>
+
+        <p style="color:rgb(17, 0, 255)" title="Wow!" id="L1"><strong>100days of code page!</strong></p>
+
+        <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">TypeScript basic types.<br></a>
+
         <picture>
             <source media="(min-widt:700px)" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
-            <img src="https://codeguida.com/media/post_title/ts_kZPZlXT.png" alt="TS" style="float:right" usemap="#TSmap" width="100%">
+            <img src="https://codeguida.com/media/post_title/ts_kZPZlXT.png" alt="TS" usemap="#TSmap" width="50%">
         </picture>
+
         <map name="TSmap">
             <area shape="circle" coords="150,150,255,183" alt="TSmap" href="https://www.typescriptlang.org/index.html">
         </map>
+
+        <table>
+            <caption>In the end:</caption>
+            <th>Skills</th>
+            <td>HTML</td>
+            <td>CSS</td>
+            <td>Bootstrap</td>
+        </table>
+
+        <ol style="list-style-type: upper-roman;">
+            <li>One</li>
+            <li>Two</li>
+        </ol>
+
+        <dl style="list-style-type:circle;">
+            <dt>Boom</dt>
+            <dd>is it?</dd> 
+        </dl>
+
+        <iframe src="https://www.typescriptlang.org/docs/handbook/basic-types.html" width="1000px" height="500px"></iframe>
+
+        <form>New form</form>
+        <input type="submit">
         <!--This is my first comment.-->
     </body> 
 </html>

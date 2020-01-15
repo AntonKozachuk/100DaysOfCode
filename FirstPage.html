@@ -1,8 +1,40 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>My first HTML page</title>
+        <style>
+        a:link {
+            color:brown;
+            background: transparent;
+            text-decoration: none;
+        }
+        a:visited {
+            color:teal;
+            background:transparent;
+            text-decoration: none;
+            font-size: 200%;
+        }
+
+        a:hover {
+            color:springgreen;
+            background:transparent;
+            text-decoration: underline;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        </style>
+        <base target="_blank">
     </head>
-    <body>
-        <p>Some text here!</p>
+    <body style="background-image: linear-gradient(grey, yellow, black);>
+        <a id="L1">Go to the first line!</a>
+        <p style="color:aqua" title="Wow!" id="L1"><strong>100days of code page!</strong></p>
+        <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html">TypeScript basic types.</a>
+        <picture>
+            <source media="(min-widt:700px)" srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+            <img src="https://codeguida.com/media/post_title/ts_kZPZlXT.png" alt="TS" style="float:right" usemap="#TSmap" width="100%">
+        </picture>
+        <map name="TSmap">
+            <area shape="circle" coords="150,150,255,183" alt="TSmap" href="https://www.typescriptlang.org/index.html">
+        </map>
+        <!--This is my first comment.-->
     </body> 
 </html>

@@ -5,6 +5,7 @@
         <meta name="description" content="My first page">
         <meta name="viewport" content="width=device_width, initial-scale=1.0">
         <title>My first HTML page</title>
+
         <style>
         a:link {
             color:brown;
@@ -32,9 +33,20 @@
             border: none;
         }
         </style>
-        <base target="_blank">
+
+        <base target="_blank"> 
+
+        <script>
+            function changeColor() {
+                document.getElementById('button1').style.color = "red";
+            }
+        </script>
+
     </head>
+ 
     <body style="background-color:lemonchiffon">
+
+        <header>My first page!</header><br>
 
         <a id="L1">Go to the first line!</a>
 
@@ -69,10 +81,53 @@
             <dd>is it?</dd> 
         </dl>
 
-        <iframe src="https://www.typescriptlang.org/docs/handbook/basic-types.html" width="1000px" height="500px"></iframe>
+        <iframe src="https://www.typescriptlang.org/docs/handbook/basic-types.html" width="5000px" height="300px"></iframe>
 
         <form>New form</form>
         <input type="submit">
+
+        <button type="button" onclick="alert('Alert!')">Click me!</button>
+        <button id="button1" onclick="changeColor()">Change color!</button>
+        <br><br>
+
+        <form action="blah-blah.php">
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="IE">
+                <option value="Opera">
+                <option value="Firefox">
+            </datalist>
+        </form>
+
+        <form>
+            User name: <br>
+            <input type="text" name="username" placeholder="username"><br>
+            Password: <br>
+            <input type="password" name="password">
+        </form>
+
+        <form>
+            Mail:<br>
+            <input type="email" name="email" size="40" autocomplete="on">
+        </form>
+
+        <form>
+            <input type="range" name="numRng" min="0" max="5">
+        </form>
+
+        <footer>
+            <p>Made by: Anton.</p>
+            <p>Contact me at: whatever.</p>
+        </footer>
+
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script>
+            var c = document.getElementById('myCanvas');
+            var ctx = c.getContext('2d');
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+        </script>
         <!--This is my first comment.-->
     </body> 
 </html>

@@ -1,0 +1,20 @@
+function scheduleShifts() {
+
+var spreadsheet = SpreadsheetApp.getActiveSheet();
+var calendarId = spreadsheet.getRange("C4").getValue();
+var eventCal = CalendarApp.getCalendarById("murka.com_l0p53jmoi45sec6c6htauui56k@group.calendar.google.com");
+  
+var signups = spreadsheet.getRange("E5:F5").getValues();
+
+  for (x = 0; x < signups.length; x++) {
+  
+    var shift = signups[x];
+    
+    var manager = shift[0];
+    var vacDate = shift[1];
+    
+    eventCal.createAllDayEvent(manager + ' ' + 'has a day off!', vacDate)
+  }   
+}
+
+!

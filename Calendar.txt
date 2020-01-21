@@ -1,23 +1,29 @@
 function scheduleShifts() {
 
 var spreadsheet = SpreadsheetApp.getActiveSheet();
-// var calendarId = spreadsheet.getRange("C4").getValue();
 var eventCal = CalendarApp.getCalendarById("murka.com_l0p53jmoi45sec6c6htauui56k@group.calendar.google.com");
   
-var signups = spreadsheet.getRange("E4:F8").getValues()
+var signups = spreadsheet.getRange(4, 5, 9, 3).getValues()
+
 var signupsFiltered = [];
 
-var j = 0
+var j = 0;
+
 for (var i = 0; i < signups.length; i++) {
+   
   Logger.log(signups[i][0] + typeof signups[i][1]);
   Logger.log(signups[i][1] + typeof signups[i][1]);
+  
   if(typeof signups[i][1] === "object"){
       signupsFiltered[j] = signups[i];
       j++;
-    }
-}
-
-  Logger.log(signups[0])
+  } else if(typeof signups[i][2] === "object"){
+      signupsFiltered[j] = signups[i];
+      j++;
+  } 
+ }
+  
+Logger.log(signups[0])
   
 Logger.log(signupsFiltered);
 Logger.log(signupsFiltered.length);
@@ -28,8 +34,11 @@ Logger.log(signups.length);
     var shift = signupsFiltered[x];
     
     var manager = shift[0];
-    var vacDate = shift[1];
+    var vacDate = (typeof shift[1] === "string") ? shift[2] : shift[1];
+    
     Logger.log('Creating event for user: '+ manager +' on date: ' + vacDate);
+    
     eventCal.createAllDayEvent(manager + ' ' + 'has a day off!', vacDate)
   }   
+  
 }

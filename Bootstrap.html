@@ -5,6 +5,7 @@
         <meta name="description" content="My first page">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -28,6 +29,16 @@
                 $('.toast').toast('show');
             });
             </script>
+            <script>
+                $(document).ready(function(){
+                  $("#myInput").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#myList li").filter(function() {
+                      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+                  });
+                });
+                </script>
 
     </head>
  
@@ -362,9 +373,43 @@
             </div>
         </div>
     </div>
-    
-    
+    <br><br>
 
+    <div class="d-inline-flex p-3 bg-secondary text-white">
+        <div class="p-2 bg-info">Flex item 1</div>
+        <div class="p-2 bg-warning">Flex item 2</div>
+        <div class="p-2 bg-primary">Flex item 3</div>
+    </div>
+    <br>
+    
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-coffee"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i> 
+    <br>
+
+    <div class="media border p-3">
+        <img src="https://mybluerobot.com/wp-content/uploads/2015/04/myAvatar-29.png" alt="MyAvatar" class="mr-3 mt-3 rounded-circle" style="width:60px">
+        <div class="media-body">
+            <h4>Here's my avatar!</h4>
+            <p>Some text here</p>
+        </div>
+    </div>
+    <br>
+
+    <div class="container mt-3">
+        <h2>List</h2>
+        <p>Some text here</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search for..">
+        <br>
+        <ul class="list-group" id="myList">
+            <li class="list-group-item">First item</li>
+            <li class="list-group-item">Second item</li>
+            <li class="list-group-item">Third item</li>
+            <li class="list-group-item">Fourth item</li>
+        </ul>
+    </div>
 
     </body>
 

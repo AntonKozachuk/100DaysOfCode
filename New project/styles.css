@@ -1,21 +1,14 @@
-/*
-STYLES.CSS
-
-Course:  Bootstrap 4 Quick Start
-Author:  Brad Hussey
-Website: bradhussey.ca
-*/
-
 html,
 body {
     height: 100%;
-}
+} 
 
 img {
     max-width: 100%;
-}
+} 
 
 /* cover */
+
 
 #cover {
     background: #222 url('img/stars.jpg') center center no-repeat;
@@ -52,3 +45,11 @@ img {
     font-size: 0.8rem;
     padding: 2.5rem 0;
 }
+
+/* #nav-main {
+    position: -webkit-sticky; 
+    position: -moz-sticky;
+    position: sticky;
+    top: 0;
+  } 
+  */

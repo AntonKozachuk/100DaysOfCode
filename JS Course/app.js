@@ -1,0 +1,17 @@
+console.log('Boom!');
+console.log(123);
+let boom = 'some info';
+console.log(boom);  
+console.table({a:1, b:2, c:'Hi'});
+console.error('This is an error message!');
+console.warn('Warning! Danger zone!');
+console.time('Hello');
+    console.log(123);
+    console.log(123);
+    console.log(123);
+    console.log(123);
+    console.log(123);
+    console.log(123);
+    console.log(123);
+    console.log(123);
+console.timeEnd('Hello');
